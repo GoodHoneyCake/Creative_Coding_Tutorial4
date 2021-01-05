@@ -3,7 +3,7 @@ export function hslToHex(h, s, l) {
   l /= 100;
 
   let c = (1 - Math.abs(2 * l - 1)) * s;
-  let x = c * (1 - Math.abs(((h / 60) % 2) - 1));
+  let x = c * (1 - Math.abs(h/60%2-1)
   let m = l - c / 2;
   let red = 0;
   let green = 0;
@@ -38,5 +38,5 @@ export function hslToHex(h, s, l) {
   green = green + m;
   blue = blue + m;
 
-  return `rgb(${(red * 255) | 0}, ${(green * 255) | 0}, ${(blue * 255) | 0})`;
+  return `rgb(${(red * 255) | 0}, ${(green * 255) | 0}, ${(blue * 255) | 0},)`;
 }

@@ -54,7 +54,7 @@ export class Particle {
       g.addColorStop(1, `rgba(0,0,0,0)`);
 
       ctx.beginPath();
-      ctx.fillStyle = g;
+      ctx.fillStyle = this.color;
       ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
       ctx.fill();
     }

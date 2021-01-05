@@ -18,7 +18,7 @@ class App {
         window.addEventListener("resize", this.resize.bind(this), false);
         this.resize();
 
-        this.ctx.globalCompositeOperation = "lighter";
+        this.ctx.globalCompositeOperation = "darken";
 
         requestAnimationFrame(this.animate.bind(this));
       },

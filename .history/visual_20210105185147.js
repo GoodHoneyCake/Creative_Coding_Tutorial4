@@ -54,7 +54,7 @@ export class Visual {
     const minHue = 80;
     const maxHue = 340;
     const hue = (maxHue - minHue) * Math.random() + minHue;
-    return hslToHex(hue, 84, 50);
+    return "#ff0000";
   }
 
   onMove(e) {
