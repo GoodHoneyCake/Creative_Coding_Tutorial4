@@ -23,25 +23,6 @@ class App {
       },
     });
   }
-
-  resize() {
-    this.stageWidth = document.body.clientWidth;
-    this.stageHeight = document.body.clientHeight;
-
-    this.canvas.width = this.stageWidth * this.pixelRatio;
-    this.canvas.height = this.stageHeight * this.pixelRatio;
-    this.ctx.scale(this.pixelRatio, this.pixelRatio);
-
-    this.visual.show(this.stageWidth, this.stageHeight);
-  }
-
-  animate() {
-    requestAnimationFrame(this.animate.bind(this));
-
-    this.ctx.clearRect(0, 0, this.stageWidth, this.stageHeight);
-
-    this.visual.animate(this.ctx);
-  }
 }
 
 window.onload = () => {

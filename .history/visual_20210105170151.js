@@ -38,7 +38,7 @@ export class Visual {
       const dx = this.mouse.x - item.x;
       const dy = this.mouse.y - item.y;
       const dist = Math.sqrt(dx * dx + dy * dy);
-      const minDist = item.radius + this.mouse.radius;
+      const minDist = item.radius + this.moust.radius;
 
       if (dist < minDist) {
         item.progress += 100;
@@ -51,7 +51,7 @@ export class Visual {
     return "#ff0000";
   }
 
-  onMove(e) {
+  onmove(e) {
     this.mouse.x = e.clientX;
     this.mouse.y = e.clientY;
   }

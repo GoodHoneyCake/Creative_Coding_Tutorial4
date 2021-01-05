@@ -13,7 +13,7 @@ export class Visual {
       radius: 0,
     };
 
-    document.addEventListener("pointermove", this.onMove.bind(this), false);
+    document.addEventListener("pointermove", this.onMove, false);
   }
 
   show(stageWidth, stageHeight) {
@@ -27,7 +27,7 @@ export class Visual {
     }
     for (let i = 0; i < 10; i++) {
       const myPos = this.pos[(Math.random() * this.posTotal) | 0];
-      this.particles.push(new Particle(myPos, this.getColor()));
+      this.particles.push(new Particle(mypos, this.getColor()));
     }
 
     for (let i = 0; i < this.particles.length; i++) {
@@ -38,7 +38,7 @@ export class Visual {
       const dx = this.mouse.x - item.x;
       const dy = this.mouse.y - item.y;
       const dist = Math.sqrt(dx * dx + dy * dy);
-      const minDist = item.radius + this.mouse.radius;
+      const minDist = item.radius + this.moust.radius;
 
       if (dist < minDist) {
         item.progress += 100;
@@ -51,7 +51,7 @@ export class Visual {
     return "#ff0000";
   }
 
-  onMove(e) {
+  onmove(e) {
     this.mouse.x = e.clientX;
     this.mouse.y = e.clientY;
   }

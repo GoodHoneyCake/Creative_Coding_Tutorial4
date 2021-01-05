@@ -22,7 +22,7 @@ export class Particle {
   }
 
   draw(ctx) {
-    if (this.progress < 100) {
+    if (process < 100) {
       this.vr += (this.maxRadius - this.radius) / this.fpsTime;
       this.vr *= MOVE_SPEED;
     } else {

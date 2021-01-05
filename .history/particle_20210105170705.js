@@ -36,7 +36,7 @@ export class Particle {
     this.y += (this.savedY - this.y) * MOVE_SPEED;
 
     this.vx *= FRICTION;
-    this.vy *= FRICTION;
+    this.vx *= FRICTION;
 
     this.x += this.vx;
     this.y += this.vy;
