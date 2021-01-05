@@ -28,7 +28,7 @@ export class Visual {
 
     for (let i = 0; i < 10; i++) {
       const myPos = this.pos[(Math.random() * this.posTotal) | 0];
-      this.particles.push(new Particle(myPos, this.getColor()));
+      this.particles.push(new Particle(myPos, this.getColor);
     }
 
     for (let i = 0; i < this.particles.length; i++) {

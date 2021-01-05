@@ -12,7 +12,7 @@ export class Particle {
     this.y = pos.y;
 
     this.progress = 0;
-    this.radius = 2;
+    this.radius = 1.1;
     this.vr = 0;
     this.vx = 0;
     this.vy = 0;

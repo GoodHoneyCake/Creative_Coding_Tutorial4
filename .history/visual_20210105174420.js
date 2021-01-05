@@ -10,7 +10,7 @@ export class Visual {
     this.mouse = {
       x: 0,
       y: 0,
-      radius: 100,
+      radius: 0,
     };
 
     document.addEventListener("pointermove", this.onMove.bind(this), false);
@@ -25,7 +25,6 @@ export class Visual {
     if (!this.pos) {
       return;
     }
-
     for (let i = 0; i < 10; i++) {
       const myPos = this.pos[(Math.random() * this.posTotal) | 0];
       this.particles.push(new Particle(myPos, this.getColor()));

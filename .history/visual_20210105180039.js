@@ -10,7 +10,7 @@ export class Visual {
     this.mouse = {
       x: 0,
       y: 0,
-      radius: 100,
+      radius: 0,
     };
 
     document.addEventListener("pointermove", this.onMove.bind(this), false);

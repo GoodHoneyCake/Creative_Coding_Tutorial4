@@ -12,7 +12,7 @@ export class Particle {
     this.y = pos.y;
 
     this.progress = 0;
-    this.radius = 2;
+    this.radius = 0;
     this.vr = 0;
     this.vx = 0;
     this.vy = 0;
@@ -36,7 +36,7 @@ export class Particle {
     this.y += (this.savedY - this.y) * MOVE_SPEED;
 
     this.vx *= FRICTION;
-    this.vy *= FRICTION;
+    this.vx *= FRICTION;
 
     this.x += this.vx;
     this.y += this.vy;
