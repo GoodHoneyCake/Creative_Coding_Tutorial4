@@ -32,9 +32,9 @@ export class Text {
     );
     return this.dotPos(density, stageWidth, stageHeight);
   }
+
   dotPos(density, stageWidth, stageHeight) {
     const imageData = this.ctx.getImageData(0, 0, stageWidth, stageHeight).data;
-
     const particles = [];
     let i = 0;
     let width = 0;
@@ -56,7 +56,10 @@ export class Text {
           height > 0 &&
           height < stageHeight
         ) {
-          particles.push({ x: width, y: height });
+          particles.push({
+            x: width,
+            y: height,
+          });
         }
       }
     }
